@@ -1,6 +1,6 @@
 # Diagramas UML — Agenda Académica Estudiantil
 
-> **Estado:** cinco vistas documentadas y sus cinco imágenes JPG publicadas en `docs/uml/`. El archivo editable `.vpp` todavía no consta en esta carpeta.
+> **Estado:** cinco vistas documentadas y sus cinco imágenes JPG publicadas en `docs/uml/`. El proyecto editable está disponible en [`docs/Agenda_Academica.vpp`](Agenda_Academica.vpp).
 
 ## Índice
 1. [Vista de contexto](#1-vista-de-contexto)
@@ -117,7 +117,7 @@ Las dependencias hacia las enumeraciones se justifican porque los tipos de los a
 - La arquitectura corresponde al backend Java 21 / Spring Boot y sus dos colecciones principales: `subjects` y `activities`.
 - Las 10 historias de usuario están publicadas en [GitHub Issues](https://github.com/M1nzutt/agenda-academica-backend/issues).
 - Se verificaron en producción con Postman las operaciones básicas, el filtrado, la agenda, el resumen y los errores HTTP 400, 404 y 409.
-- **Archivo editable:** el entregable formal de los diagramas es un proyecto `.vpp` de Visual Paradigm. Las imágenes solo sirven para consulta; no sustituyen el modelo.
+- **Archivo editable:** el entregable formal es [`Agenda_Academica.vpp`](Agenda_Academica.vpp), proyecto nativo de Visual Paradigm. Las imágenes solo sirven para consulta; no sustituyen el modelo.
 - **Capturas:** las cinco exportaciones JPG originales están enlazadas en cada vista de esta página.
 
 > **Nota de alcance:** la documentación representa el sistema entregado, sin frontend ni autenticación. No atribuye funciones a servicios que no existen.
