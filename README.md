@@ -76,3 +76,8 @@ Render utiliza su variable `PORT`; `application.yml` ya la lee. Nunca subas `.en
 - `exception`: errores 400, 404 y 409
 
 **Nota:** Los métodos de filtrado cargan las actividades en memoria, suficiente para esta entrega pequeña. No existe separación entre usuarios ni autenticación; la API pública permite operar sobre datos compartidos. Usa únicamente datos de prueba, nunca información personal sensible. Se verificaron manualmente en local la creación y consulta de materias, creación de actividades, actualización de estado y resumen académico contra MongoDB Atlas. También se comprobó que el endpoint público `GET /api/subjects` en Render consulta correctamente los datos de MongoDB Atlas. No se han verificado todavía todos los endpoints en producción ni existe una batería completa de pruebas de integración automatizadas.
+
+
+## Documentación UML
+
+Consulta [Diagramas UML — cinco vistas de arquitectura](docs/DIAGRAMAS_UML.md) para las vistas de contexto, funcional, lógica, desarrollo (clases en capas) y despliegue. Las historias de usuario se gestionan en [Issues](../../issues).
