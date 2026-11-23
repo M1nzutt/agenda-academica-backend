@@ -1,6 +1,6 @@
 # Diagramas UML — Agenda Académica Estudiantil
 
-> **Estado:** cinco vistas diseñadas en Visual Paradigm Community Edition. Esta página documenta la versión final revisada. El archivo fuente editable `Agenda_Academica.vpp` y las capturas se conservan como entregables externos hasta su incorporación al repositorio. **No confundir este Markdown con el archivo UML nativo.**
+> **Estado:** cinco vistas documentadas y sus cinco imágenes JPG publicadas en `docs/uml/`. El archivo editable `.vpp` todavía no consta en esta carpeta.
 
 ## Índice
 1. [Vista de contexto](#1-vista-de-contexto)
@@ -12,6 +12,8 @@
 
 ## 1. Vista de contexto
 
+![Vista de contexto](uml/Vista%2001%20-%20contexto%20corregida.jpg)
+
 **Propósito:** identificar el límite del sistema y sus interacciones externas sin detallar clases o servicios internos.
 
 - **Estudiante / Postman → Agenda Académica:** solicitudes HTTPS a la API REST.
@@ -22,6 +24,8 @@
 Postman es el cliente de prueba porque el alcance actual no incluye frontend. Render aloja la API y MongoDB Atlas mantiene los datos; el diagrama de despliegue precisa dónde funcionan.
 
 ## 2. Vista funcional — componentes
+
+![Vista funcional](uml/Vista%2002%20-%20funcional.jpg)
 
 **Propósito:** identificar responsabilidades funcionales y servicios consumidos/proporcionados.
 
@@ -44,6 +48,8 @@ Postman es el cliente de prueba porque el alcance actual no incluye frontend. Re
 **Notación:** las interfaces proporcionadas (círculo) y requeridas (semicírculo) representan contratos UML. Una interfaz consumida necesita estar ensamblada con la correspondiente ofrecida. El dibujo de varias líneas hacia `Repositorio` no implica que exista un único método genérico en código: en Java se utilizan `SubjectRepository` y `ActivityRepository`.
 
 ## 3. Vista lógica — modelo de dominio
+
+![Vista lógica](uml/Vista%2003%20-%20logica.jpg)
 
 **Propósito:** describir las entidades y restricciones de los datos sin mezclar la infraestructura.
 
@@ -71,6 +77,8 @@ Las dependencias hacia las enumeraciones se justifican porque los tipos de los a
 
 ## 4. Vista de desarrollo — clases en capas
 
+![Vista de desarrollo](uml/Vista%2004%20-%20desarrollo%20(Controller%2C%20Service%2C%20Repository%2C%20Model).jpg)
+
 **Propósito:** explicar la organización del backend Java. Se representa mediante un **diagrama de clases UML en cuatro capas**, no mediante paquetes.
 
 | Capa | Clases o interfaces | Responsabilidad |
@@ -87,6 +95,8 @@ Las dependencias hacia las enumeraciones se justifican porque los tipos de los a
 **Regla importante:** `SubjectService` consulta `ActivityRepository` para impedir eliminar una materia que tiene actividades: el backend devuelve **HTTP 409 Conflict**.
 
 ## 5. Vista de despliegue
+
+![Vista de despliegue](uml/Vista%2005%20-%20despliegue.jpg)
 
 **Propósito:** mostrar los entornos donde opera la aplicación y sus rutas de comunicación.
 
@@ -108,6 +118,6 @@ Las dependencias hacia las enumeraciones se justifican porque los tipos de los a
 - Las 10 historias de usuario están publicadas en [GitHub Issues](https://github.com/M1nzutt/agenda-academica-backend/issues).
 - Se verificaron en producción con Postman las operaciones básicas, el filtrado, la agenda, el resumen y los errores HTTP 400, 404 y 409.
 - **Archivo editable:** el entregable formal de los diagramas es un proyecto `.vpp` de Visual Paradigm. Las imágenes solo sirven para consulta; no sustituyen el modelo.
-- **Capturas:** para que esta página muestre imágenes del diagrama, subir al repositorio las exportaciones PNG reales y agregarlas como enlaces relativos en cada sección. No sustituirlas por ilustraciones generadas.
+- **Capturas:** las cinco exportaciones JPG originales están enlazadas en cada vista de esta página.
 
 > **Nota de alcance:** la documentación representa el sistema entregado, sin frontend ni autenticación. No atribuye funciones a servicios que no existen.
